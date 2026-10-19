@@ -1,0 +1,64 @@
+# ==========================================
+# macOS
+# ==========================================
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails / iCloud
+._*
+*.icloud
+
+# Volume / system metadata
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# ==========================================
+# MATLAB / Simulink
+# ==========================================
+
+# Autosave / backup files
+*.asv
+*.m~
+*.autosave
+*.slx.autosave
+*.mdl.r*
+*.slx.r*
+
+# Compiled / obfuscated files
+*.mex*
+*.p
+
+# Packaged app / toolbox files
+*.mlappinstall
+*.mltbx
+*.mlpkginstall
+
+# Simulink / code generation caches
+*.slxc
+slprj/
+sccprj/
+codegen/
+helpsearch*/
+
+# Deployment / build artifacts
+*.ctf
+deploytool/
+packages/
+
+# MATLAB Drive tag
+*.MATLABDriveTag
+
+# Optional: ignore MAT/FIG data files (uncomment based on project needs)
+# *.mat
+# *.fig

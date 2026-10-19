@@ -1,0 +1,227 @@
+{
+  "main": {
+    "id": "64c7e9555d245db7",
+    "type": "split",
+    "children": [
+      {
+        "id": "b9c43474f2a82546",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "deb398b8258c32ab",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Practice-2/Part 1. Sine Function Approximation.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Part 1. Sine Function Approximation"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "a207d50b49732318",
+    "type": "split",
+    "children": [
+      {
+        "id": "39ed72547558fbf9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "89911dc4e6a8920a",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "34c059ad05b3d362",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "7c35859612c1613d",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-bookmark",
+              "title": "Закладки"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "b816a419fae011f9",
+    "type": "split",
+    "children": [
+      {
+        "id": "5e47d14c7b7697c1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c6af8872541ba63c",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Practice-2/Part 1. Sine Function Approximation.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "2154b3dee2d030c6",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Practice-2/Part 1. Sine Function Approximation.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "9055f40c9f05efa1",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Теги"
+            }
+          },
+          {
+            "id": "a47e4529ee249450",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "d77f9a3bc5ad311a",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Practice-2/Part 1. Sine Function Approximation.md",
+                "followCursor": true,
+                "showSearch": true,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          },
+          {
+            "id": "69a3fbf5f7132c3b",
+            "type": "leaf",
+            "state": {
+              "type": "file-properties",
+              "state": {
+                "file": "Practice-2/Part 1. Sine Function Approximation.md"
+              },
+              "icon": "lucide-info",
+              "title": "File properties"
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "deb398b8258c32ab",
+  "lastOpenFiles": [
+    "Materials/2023_Bachelor_(AT4)-Identification_Theory_Syllabus_A2026.pdf",
+    "Practice-1/Part 1. Linear Regressin Model.md",
+    "Practice-1/Part 2. Log Function Approximation.md",
+    "Identification Theory — Lab Lessons.md",
+    "Introductions.md",
+    "Practice-2/Part 1. Sine Function Approximation.md",
+    "Practice-2/Part 2. Parameter Convergence.md",
+    "Materials/Lectures/Lecture_2_Approximation.pdf",
+    "Materials/Lectures/Lecture_4_Identifiability.pdf",
+    "Materials/Lectures/Lecture_3_Estimation.pdf",
+    "Materials/Lectures/Lecture_1_Identification.pdf",
+    "Practice-2/Part_2_task_case_6.m",
+    "Practice-2/Copy_of_Part_2_task_case_5.m",
+    "Practice-2/Part_2_task_case_5.m",
+    "Practice-2/Copy_of_Part_2_task_case_4.m",
+    "Practice-2/Part_2_task_case_4.m",
+    "Untitled.md",
+    "Practice-1/Part 1. Tasks.md",
+    "Practice-1/Task/Без названия.md",
+    "создайте ссылку.md",
+    "Добро пожаловать.md"
+  ]
+}

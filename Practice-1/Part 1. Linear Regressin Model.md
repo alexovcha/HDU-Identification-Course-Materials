@@ -181,15 +181,15 @@ $$
 
 2. Find output $y$
 
-   $$
-   y = g - \dot{v}
-   $$
+$$
+y = g - \dot{v}
+$$
 
 3. Equation
 
-   $$
-   g - \dot{v} = \frac{b}{m} v
-   $$
+$$
+g - \dot{v} = \frac{b}{m} v
+$$
 
 
 ### Task 2. RC Circuit

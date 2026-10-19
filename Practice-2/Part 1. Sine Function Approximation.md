@@ -37,15 +37,18 @@ In each case, the model has the form $y = \boldsymbol{\varphi}^{\top} \boldsymbo
 We have data points on the interval $t \in [-2\pi, 2\pi]$ with step $\pi/100$, with true value $y = \sin(t)$.
 
 Then complete the following steps for each of the three models:
-1. **Write the model in vector form:**
 
-   $$
-   y = \boldsymbol{\varphi}^{\top} \boldsymbol{\theta}
-   $$
+### 1. Write the model in vector form
 
-   This means "output = (known stuff) × (unknown coefficients)".
+$$
+y = \boldsymbol{\varphi}^{\top} \boldsymbol{\theta}
+$$
 
-2. **Build the extended regression:** For each measurement point $t_i$, we can write a single equation:
+This means "output = (known stuff) × (unknown coefficients)".
+
+### 2. Build the extended regression
+
+For each measurement point $t_i$, we can write a single equation:
 
 $$
 \begin{aligned}
@@ -72,9 +75,7 @@ $$
 **Model 1 (2 parameters):**
 
 $$
-\begin{bmatrix} y(t_1) \\ y(t_2) \\ \vdots \\ y(t_N) \end{bmatrix}
-=
-\begin{bmatrix}
+\begin{bmatrix} y(t_1) \\ y(t_2) \\ \vdots \\ y(t_N) \end{bmatrix} = \begin{bmatrix}
 t_1 & 1 \\
 t_2 & 1 \\
 \vdots & \vdots \\
@@ -86,9 +87,7 @@ $$
 **Model 2 (3 parameters):**
 
 $$
-\begin{bmatrix} y(t_1) \\ y(t_2) \\ \vdots \\ y(t_N) \end{bmatrix}
-=
-\begin{bmatrix}
+\begin{bmatrix} y(t_1) \\ y(t_2) \\ \vdots \\ y(t_N) \end{bmatrix} = \begin{bmatrix}
 t_1^2 & t_1 & 1 \\
 t_2^2 & t_2 & 1 \\
 \vdots & \vdots & \vdots \\
@@ -100,9 +99,7 @@ $$
 **Model 3 (11 parameters):**
 
 $$
-\begin{bmatrix} y(t_1) \\ y(t_2) \\ \vdots \\ y(t_N) \end{bmatrix}
-=
-\begin{bmatrix}
+\begin{bmatrix} y(t_1) \\ y(t_2) \\ \vdots \\ y(t_N) \end{bmatrix} = \begin{bmatrix}
 t_1^{10} & t_1^{9} & \dots & t_1 & 1 \\
 t_2^{10} & t_2^{9} & \dots & t_2 & 1 \\
 \vdots & \vdots & \ddots & \vdots & \vdots \\
@@ -113,7 +110,7 @@ $$
 
 In each case, the matrix $\Phi$ has size $N \times p$, where $N$ is the number of data points and $p$ is the number of parameters. The vector $Y$ has size $N \times 1$, and $\theta$ has size $p \times 1$.
 
-3. **Estimate the parameters (Least Squares):**
+### 3. Estimate the parameters (Least Squares)
 
 $$
 \hat{\theta} = \left(\Phi^{\top} \Phi\right)^{-1} \Phi^{\top} Y
@@ -121,7 +118,7 @@ $$
 
 This formula finds the "best fit" coefficients that make the polynomial as close as possible to $\sin(t)$.
 
-4. **Compute the predicted output:**
+### 4. Compute the predicted output
 
 $$
 \hat{Y} = \Phi \hat{\theta}
@@ -130,7 +127,7 @@ $$
 Plug the estimated coefficients back in to get predicted values.
 
 
-5. **Measure the error (Loss function):**
+### 5. Measure the error (Loss function)
 
 $$
 J = \left(Y - \hat{Y}\right)^{\top} \left(Y - \hat{Y}\right)
@@ -138,13 +135,16 @@ $$
 
 This is the sum of squared differences between true values and predictions. Small $J$ means a good fit; large $J$ means a bad fit.
 
-6. **Repeat with noise:** Real data is never perfect, so we also try:
+### 6. Repeat with noise
+
+Real data is never perfect, so we also try:
 
 $$
 y = \sin(t) + \nu
 $$
 
 where $\nu$ is random noise. The noise is drawn from a uniform distribution on the interval $[-0.25, 0.25]$, so each measurement is randomly shifted up or down by a small amount. Then repeat all steps with the noised output and observe:
+
 - How do the loss values $J_1$, $J_2$, $J_3$ change compared to the clean case?
 - Which model gives the most stable results?
 - Does the high-order polynomial (Model 3) overfit the noise?

@@ -60,7 +60,7 @@ We have a system with two regressors $x_1$ and $x_2$, and the output $y$. The no
 
 Then complete the following steps:
 
-1. **Write the model in vector form:**
+### 1. Write the model in vector form
 
 $$
 y = \boldsymbol{\varphi}^{\top} \boldsymbol{\theta}
@@ -68,7 +68,9 @@ $$
 
 This means "output = (known stuff) × (unknown coefficients)".
 
-2. **Build the extended regression:** Stack all equations into one big matrix equation:
+### 2. Build the extended regression
+
+Stack all equations into one big matrix equation:
 
 $$
 Y = \Phi \theta
@@ -76,19 +78,23 @@ $$
 
 where $Y$ is the output vector, $\Phi = [x_1, x_2]$ is the regressor matrix, and $\theta = [2, 5]^\top$ is the parameter vector.
 
-3. **Estimate the parameters (Least Squares):**
+### 3. Estimate the parameters (Least Squares)
 
 $$
 \hat{\theta} = \left(\Phi^{\top} \Phi\right)^{-1} \Phi^{\top} Y
 $$
 
-4. **Find the error:** The noise $v$ is usually an unknown signal. Assume that the error of the output approximately equals the noise:
+### 4. Find the error
+
+The noise $v$ is usually an unknown signal. Assume that the error of the output approximately equals the noise:
 
 $$
 v \approx \tilde{Y} = Y - \hat{Y} = Y - \Phi \hat{\theta}
 $$
 
-5. **Check the hypotheses below** using the estimated error $v=\tilde{Y}$ and the regressors $\varphi_1$, $\varphi_2$. For each hypothesis, use the corresponding threshold from the [Threshold Values](#threshold-values) table. Mark **+** if the hypothesis passes and **−** if it fails, and record the result in the [Results Table](#results-table).
+### 5. Check the hypotheses below
+
+Use the estimated error $v=\tilde{Y}$ and the regressors $\varphi_1$, $\varphi_2$. For each hypothesis, use the corresponding threshold from the [Threshold Values](#threshold-values) table. Mark **+** if the hypothesis passes and **−** if it fails, and record the result in the [Results Table](#results-table).
 
 ---
 

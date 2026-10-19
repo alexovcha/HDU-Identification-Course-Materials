@@ -79,7 +79,7 @@ $$
 \begin{align}
 y &= \varphi_{1} \theta_{1} + \varphi_{2}\theta_{2} \\
 y &= \begin{bmatrix} \varphi_{1} & \varphi_{2} \end{bmatrix}
-     \begin{bmatrix} \theta_{1} \\ \theta_{2} \end{bmatrix}
+\begin{bmatrix} \theta_{1} \\ \theta_{2} \end{bmatrix}
 \end{align}
 $$
 
@@ -115,7 +115,7 @@ $$
 
 $$
 y = \begin{bmatrix} \ddot{x} & \dot{x} & x \end{bmatrix}
-    \begin{bmatrix} m \\ b \\ k \end{bmatrix}
+\begin{bmatrix} m \\ b \\ k \end{bmatrix}
 = \boldsymbol{\varphi}^\top \boldsymbol{\theta}
 $$
 
@@ -151,7 +151,7 @@ $$
 
 $$
 y = \begin{bmatrix} 1 & u & u^2 \end{bmatrix}
-    \begin{bmatrix} a \\ b \\ c \end{bmatrix}
+\begin{bmatrix} a \\ b \\ c \end{bmatrix}
 $$
 
 > **Takeaway:** Nonlinearity in the *inputs* is fine. The LRM framework only requires linearity in the *parameters*.
@@ -173,19 +173,19 @@ $$
 
 where $m$ and $b$ are **unknown** parameters, and $g$, $v$, $\dot{v}$ are measured.
 
-1. Deveide by the $m$
+#### 1. Divide by $m$
 
 $$
 g - \frac{b}{m} v = \dot{v}
 $$
 
-2. Find output $y$
+#### 2. Find output $y$
 
 $$
 y = g - \dot{v}
 $$
 
-3. Equation
+#### 3. Equation
 
 $$
 g - \dot{v} = \frac{b}{m} v

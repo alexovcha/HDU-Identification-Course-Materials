@@ -35,7 +35,7 @@ In each case, the model has the form $y = \boldsymbol{\varphi}^{\top} \boldsymbo
 
 We have data points at $t = 1, 2, 3, \dots, 21$, with true value $y = \log(t)$.
 
-1. **Write the model in vector form:**
+### 1. Write the model in vector form
 
 $$
 y = \boldsymbol{\varphi}^{\top} \boldsymbol{\theta}
@@ -43,7 +43,9 @@ $$
 
 This means "output = (known stuff) × (unknown coefficients)".
 
-3. **Build the extended regression:** Stack all 21 equations into one big matrix equation:
+### 2. Build the extended regression
+
+Stack all 21 equations into one big matrix equation:
 
 $$
 Y = \Phi \theta
@@ -51,7 +53,7 @@ $$
 
 where $Y$ is the column vector of all 21 outputs, $\Phi$ is the matrix where each row is $\boldsymbol{\varphi}^{\top}$ for one $t$, and $\theta$ is the column vector of unknown coefficients.
 
-4. **Estimate the parameters (Least Squares):**
+### 3. Estimate the parameters (Least Squares)
 
 $$
 \hat{\theta} = \left(\Phi^{\top} \Phi\right)^{-1} \Phi^{\top} Y
@@ -59,15 +61,15 @@ $$
 
 This formula finds the "best fit" coefficients that make the polynomial as close as possible to $\log(t)$.
 
-5. **Compute the predicted output:**
+### 4. Compute the predicted output
 
 $$
 \hat{Y} = \Phi \hat{\theta}
 $$
 
-   Plug the estimated coefficients back in to get predicted values.
+Plug the estimated coefficients back in to get predicted values.
 
-6. **Measure the error (Loss function):**
+### 5. Measure the error (Loss function)
 
 $$
 J = \left(Y - \hat{Y}\right)^{\top} \left(Y - \hat{Y}\right)
@@ -75,7 +77,9 @@ $$
 
 This is the sum of squared differences between true values and predictions. Small $J$ means a good fit; large $J$ means a bad fit.
 
-7. **Repeat with noise:** Real data is never perfect, so we also try:
+### 6. Repeat with noise
+
+Real data is never perfect, so we also try:
 
 $$
 y = \log(t) + \nu

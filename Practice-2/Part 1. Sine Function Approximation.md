@@ -11,13 +11,19 @@ date: 2026-10-14
 We will try three polynomial models, from simple to complex:
 
 **Model 1 — Straight Line (2 parameters):**
-$$y = at + b = \begin{bmatrix} t & 1 \end{bmatrix} \begin{bmatrix} a \\ b \end{bmatrix}$$
+$$
+y = at + b = \begin{bmatrix} t & 1 \end{bmatrix} \begin{bmatrix} a \\ b \end{bmatrix}
+$$
 
 **Model 2 — Parabola (3 parameters):**
-$$y = at^2 + bt + c = \begin{bmatrix} t^2 & t & 1 \end{bmatrix} \begin{bmatrix} a \\ b \\ c \end{bmatrix}$$
+$$
+y = at^2 + bt + c = \begin{bmatrix} t^2 & t & 1 \end{bmatrix} \begin{bmatrix} a \\ b \\ c \end{bmatrix}
+$$
 
 **Model 3 — High-Order Polynomial (11 parameters):**
-$$y = a_0 + a_1 t + a_2 t^2 + \dots + a_{10} t^{10} = \begin{bmatrix} t^{10} & t^{9} & \dots & t & 1 \end{bmatrix} \begin{bmatrix} a_0 \\ a_1 \\ \vdots \\ a_{10} \end{bmatrix}$$
+$$
+y = a_0 + a_1 t + a_2 t^2 + \dots + a_{10} t^{10} = \begin{bmatrix} t^{10} & t^{9} & \dots & t & 1 \end{bmatrix} \begin{bmatrix} a_0 \\ a_1 \\ \vdots \\ a_{10} \end{bmatrix}
+$$
 
 In each case, the model has the form $y = \boldsymbol{\varphi}^{\top} \boldsymbol{\theta}$, where $\boldsymbol{\varphi}$ contains known values and $\boldsymbol{\theta}$ contains unknown coefficients. More parameters means a more flexible curve, but also more risk of overfitting.
 
@@ -125,4 +131,5 @@ Then complete the following steps for each of the three models:
 | 1 | $at + b$ | 2 | $[t \;\; 1]\,[a \;\; b]^\top$ |
 | 2 | $at^2 + bt + c$ | 3 | $[t^2 \;\; t \;\; 1]\,[a \;\; b \;\; c]^\top$ |
 | 3 | $\sum_{k=0}^{10} a_k t^k$ | 11 | $[t^{10} \;\dots\; t \;\; 1]\,[a_0 \;\dots\; a_{10}]^\top$ |
+
 **Goal:** Find which model best approximates $\sin(t)$, both with and without noise.

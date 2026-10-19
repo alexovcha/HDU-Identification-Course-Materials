@@ -2,7 +2,7 @@ Hi everyone,
 
 Today's class builds directly on what we've learned and is split into two parts:
 
-1. **Part 1 — Function Approximation:** We will approximate a sine wave (\(y = \sin(t)\)) using three different polynomial models (from a simple straight line up to a 10th-order polynomial). We will test them on clean data and then evaluate how the high-order model reacts when random noise is added.
+1. **Part 1 — Function Approximation:** We will approximate a sine wave ($y = \sin(t)$) using three different polynomial models (from a simple straight line up to a 10th-order polynomial). We will test them on clean data and then evaluate how the high-order model reacts when random noise is added.
 2. **Part 2 — Hypothesis Testing:** We will assess 8 distinct linear regression cases by verifying 5 fundamental statistical hypotheses (Zero Mean, Independence, Non-singularity, Constant Variance, and Autocorrelation) using specific evaluation thresholds.
 
 Everything will be implemented, evaluated, and plotted directly within MATLAB.

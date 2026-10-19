@@ -5,7 +5,7 @@ tags:
   - Approximation
 date: 2026-10-09
 ---
-> Linear regression [[Lecture_2_Approximation.pdf#page=11&selection=45,0,45,17|Lecture_2_Approximation, page 11]]
+> Linear regression [Lecture_2_Approximation, page 11](../Materials/Lectures/Lecture_2_Approximation.pdf#page=11)
 
 ## Linear Regression Model
 
@@ -47,19 +47,25 @@ Given a physical equation, follow these three steps:
 
 ## Example 1: RL Circuit (Ohm's Law)
 
-> Consider an electrical circuit with Resistance and Inductance. We can write Ohm's Law [[Lecture_1_Identification.pdf#page=25&selection=2,0,2,16|Lecture_1_Identification, page 25]]
+> Consider an electrical circuit with Resistance and Inductance. We can write Ohm's Law [Lecture_1_Identification, page 25](../Materials/Lectures/Lecture_1_Identification.pdf#page=25)
 
-$$U = RI + L\dot{I}$$
+$$
+U = RI + L\dot{I}
+$$
 
 where $R$ and $L$ are **unknown** parameters, and $U$, $I$, $\dot{I}$ are measured variables.
 
 **Step 1 — Find the output $y$.**  
 All three terms are $U$, $RI$, $L\dot{I}$. Only $U$ is free of unknown parameters, so we keep it on the left:
-$$y = U$$
+$$
+y = U
+$$
 
 **Step 2 — Separate known and unknown parts.**  
 The right side has two terms, $RI$ and $L\dot{I}$. In each term, the *variable* part is known and the *coefficient* is unknown:
-$$RI + L\dot{I} = \underbrace{I}_{\varphi_1}\underbrace{R}_{\theta_1} + \underbrace{\dot{I}}_{\varphi_2}\underbrace{L}_{\theta_2} = \varphi_1 \theta_1 + \varphi_2 \theta_2$$
+$$
+RI + L\dot{I} = \underbrace{I}_{\varphi_1}\underbrace{R}_{\theta_1} + \underbrace{\dot{I}}_{\varphi_2}\underbrace{L}_{\theta_2} = \varphi_1 \theta_1 + \varphi_2 \theta_2
+$$
 
 **Step 3 — Write the LRM.**
 $$
@@ -77,16 +83,22 @@ with $\varphi_1 = I$, $\varphi_2 = \dot{I}$, $\theta_1 = R$, $\theta_2 = L$.
 ## Example 2: Mass–Spring–Damper System
 
 > Consider a mechanical system with mass $m$, damping coefficient $b$, and spring stiffness $k$, driven by an external force $F$. Newton's second law gives:
-$$F = m\ddot{x} + b\dot{x} + kx$$
+$$
+F = m\ddot{x} + b\dot{x} + kx
+$$
 where $m$, $b$, $k$ are **unknown** parameters and $x$ is the measured position.
 
 **Step 1 — Find the output $y$.**  
 The only term without unknown parameters is $F$:
-$$y = F$$
+$$
+y = F
+$$
 
 **Step 2 — Separate known and unknown parts.**  
 There are three terms on the right, so we get three regressors:
-$$m\ddot{x} + b\dot{x} + kx = \underbrace{\ddot{x}}_{\varphi_1}\underbrace{m}_{\theta_1} + \underbrace{\dot{x}}_{\varphi_2}\underbrace{b}_{\theta_2} + \underbrace{x}_{\varphi_3}\underbrace{k}_{\theta_3}$$
+$$
+m\ddot{x} + b\dot{x} + kx = \underbrace{\ddot{x}}_{\varphi_1}\underbrace{m}_{\theta_1} + \underbrace{\dot{x}}_{\varphi_2}\underbrace{b}_{\theta_2} + \underbrace{x}_{\varphi_3}\underbrace{k}_{\theta_3}
+$$
 
 **Step 3 — Write the LRM.**
 $$
@@ -100,18 +112,24 @@ $$
 ## Example 3: Static Nonlinear Function (Linear in Parameters)
 
 > Suppose a measured quantity $z$ depends on a variable $u$ through
-> $$z = a + b\,u + c\,u^2$$
+> $$
+> z = a + b\,u + c\,u^2
+> $$
 > where $a$, $b$, $c$ are **unknown** parameters.
 
 Even though $z$ is a *nonlinear* function of $u$, the model is still **linear in the parameters** $a, b, c$.
 
 **Step 1 — Find the output $y$.**  
 The whole expression is on the right, so:
-$$y = z$$
+$$
+y = z
+$$
 
 **Step 2 — Separate known and unknown parts.**  
 The regressors are the *known functions of $u$*:
-$$a + b\,u + c\,u^2 = \underbrace{1}_{\varphi_1}\underbrace{a}_{\theta_1} + \underbrace{u}_{\varphi_2}\underbrace{b}_{\theta_2} + \underbrace{u^2}_{\varphi_3}\underbrace{c}_{\theta_3}$$
+$$
+a + b\,u + c\,u^2 = \underbrace{1}_{\varphi_1}\underbrace{a}_{\theta_1} + \underbrace{u}_{\varphi_2}\underbrace{b}_{\theta_2} + \underbrace{u^2}_{\varphi_3}\underbrace{c}_{\theta_3}
+$$
 
 **Step 3 — Write the LRM.**
 $$
@@ -132,7 +150,9 @@ $$
 
 A body falls under gravity $g$ with air drag proportional to velocity: $F_d = bv$. The equation of motion is:
 
-$$mg - bv = m\dot{v}$$
+$$
+mg - bv = m\dot{v}
+$$
 
 where $m$ and $b$ are **unknown** parameters, and $g$, $v$, $\dot{v}$ are measured.
 
@@ -141,16 +161,22 @@ $$
 g - \frac{b}{m} v = \dot{v}
 $$
 2. Find output $y$
-   $$y = g - \dot{v}$$
+   $$
+   y = g - \dot{v}
+   $$
 3. Equation
-   $$g - \dot{v} = \frac{b}{m} v$$
+   $$
+   g - \dot{v} = \frac{b}{m} v
+   $$
 
 
 ### Task 2. RC Circuit
 
 A capacitor $C$ and resistor $R$ are in series. The measured voltage across the resistor is $U_R = RI$, and the voltage across the capacitor is $U_C$. The total applied voltage is:
 
-$$U = RI + \frac{1}{C}\int I \, dt$$
+$$
+U = RI + \frac{1}{C}\int I \, dt
+$$
 
 where $R$ and $C$ are **unknown** parameters, and $U$, $I$, $\int I \, dt$ are measured.
 
@@ -158,7 +184,9 @@ where $R$ and $C$ are **unknown** parameters, and $U$, $I$, $\int I \, dt$ are m
 
 A sensor output $z$ depends on temperature $T$ as:
 
-$$z = a_0 + a_1 T + a_2 T^2 + a_3 T^3$$
+$$
+z = a_0 + a_1 T + a_2 T^2 + a_3 T^3
+$$
 
 where $a_0, a_1, a_2, a_3$ are **unknown** calibration coefficients, and $z$, $T$ are measured.
 

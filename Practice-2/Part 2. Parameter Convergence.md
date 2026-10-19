@@ -9,6 +9,7 @@ date: 2026-10-14
 ---
 
 Consider a system of linear regression equations (LRE) with noise $v$:
+
 $$
 \begin{aligned}
 y &= 2x_{1} + 5x_{2} + v \\
@@ -23,10 +24,12 @@ y &= 1.1x_{1} + 5.32x_{2} + v
 $$
 
 In vector form: 
+
 $$
 y = \begin{bmatrix} x_{1} & x_{2} \end{bmatrix}
     \begin{bmatrix} 2 \\ 5 \end{bmatrix}
 $$
+
 For each LRE, you have to check five hypotheses to guarantee that $\mathbb{E}\{\hat{\theta}\} = \theta$.
 
 ---
@@ -34,9 +37,11 @@ For each LRE, you have to check five hypotheses to guarantee that $\mathbb{E}\{\
 [Lecture_3_Estimation, page 10](../Materials/Lectures/Lecture_3_Estimation.pdf#page=10)
 
 Let a linear estimate be formed as: 
+
 $$
 \hat{\theta} = \left(\Phi^{\top} \Phi\right)^{-1} \Phi^{\top} Y
 $$
+
 Then **if**
 - $\mathbb{E}\{v\} = 0$ **(H1)**,
 - $v$ and $\varphi_i$ are independent, meaning $\mathbb{E}\{v \varphi_i\} = \mathbb{E}\{v\}\,\mathbb{E}\{\varphi_i\}$ **(H2)**,
@@ -91,51 +96,65 @@ Then complete the following steps:
 
 ### H1 — Zero mean
 The expected value of the noise is zero:
+
 $$
 \mathbb{E}\{v\} = 0
 $$
+
 **How to check:** Compute the mean of $v$ (or $\tilde{Y}$) and compare it to a small threshold. Also plot a histogram to visually confirm the distribution is centered at zero.
 
 ---
 
 ### H2 — Independence from regressors
 The noise signal $v$ is independent of all regressor elements $\varphi_i$: 
+
 $$
 \mathbb{E}\{v \varphi_i\} = \mathbb{E}\{v\}\,\mathbb{E}\{\varphi_i\}
 $$
+
 **How to check:** Compute the correlation coefficient between each regressor and the noise:
+
 $$
 \text{corr}(\varphi_i, v)
 $$
+
 If the correlation is close to zero, the regressor and noise are independent. Use `corrcoef` in MATLAB to compute this.
 
 ---
 
 ### H3 — Nonsingular regressor matrix
+
 $$
 \det\left(\Phi^{\top} \Phi\right) \neq 0
 $$
+
 **How to check:** Compute the determinant and the condition number of $\Phi^{T} \Phi$. If
+
 $$
 \det\left(\Phi^{T} \Phi\right) \approx 0 \quad \text{or} \quad \text{cond}\left(\Phi^{T} \Phi\right) > 1000
 $$
+
 the matrix is close to singular, and the parameters cannot be estimated reliably.
 
 ---
 
 ### H4 — Constant dispersion
+
 $$
 \mathbb{D}\{v\} = \sigma^{2}_{v} = \text{const}
 $$
+
 **How to check:** Split the noise signal into several windows (e.g., 10 parts) and compute the variance in each window. If the variance stays roughly constant across all windows, H4 holds. Plot the variance versus the window index — the curve should be approximately flat.
 
 ---
 
 ### H5 — No autocorrelation
 The noise $v(k)$ is not an autocorrelated process: 
+
 $$
 \mathbb{D}\{v\} = \sigma^{2}_{v} \mathcal{I}, \quad R_{v}(\tau) = 0 \text{ for } \tau \neq 0
 $$
+
 **How to check:** Compute the autocorrelation function of $v$. If the autocorrelation is close to zero for all non-zero lags, H5 holds. Use `autocorr` in MATLAB — the plot should show a single peak at lag 0 and values within the confidence bounds elsewhere.
 
 ---

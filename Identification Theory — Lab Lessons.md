@@ -4,9 +4,11 @@ To pass the laboratory component of the course, students must complete the desig
 
 #### Score Calculation & Bonus Mechanism
 The final laboratory score includes a supportive bonus mechanism where the practical **task_score** directly helps students reach the absolute point cap for the lab. The final score is determined by the following formula:
+
 $$
 \text{Final Lab Score} = \min\Big(\text{max\_lab\_score}, \; \text{lab\_score} + \text{task\_score}\Big)
 $$
+
 * **lab\_score**: Base points awarded for report quality, formatting, and defense.
 * **task\_score**: Points earned from completing individual coding tasks.
 * **max\_lab\_score**: The absolute maximum point cap for the laboratory assignment.
@@ -16,6 +18,7 @@ The total score for the practical portion equals exactly **half of the maximum l
 $$
 \text{task\_score} = \frac{\text{sum\_tasks\_socre}}{\text{Total Number of Tasks } (task\_n)}
 $$
+
 #### Points Allocation Overview
 
 | Assignment | Max Lab Score (max\_lab\_score) | sum\_tasks\_socre |

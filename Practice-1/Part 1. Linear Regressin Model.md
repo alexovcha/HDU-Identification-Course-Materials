@@ -10,10 +10,13 @@ date: 2026-10-09
 ## Linear Regression Model
 
 Let's consider the canonical **Linear Regression Model** (LRM):
+
 $$
 y = \varphi_{1} \theta_{1} + \varphi_{2} \theta_{2} + \dots + \varphi_{n} \theta_{n}
 $$
+
 We can rewrite this equation in matrix form:
+
 $$
 y = \begin{bmatrix}
 \varphi_{1} & \varphi_{2} & \dots & \varphi_{n}
@@ -26,6 +29,7 @@ y = \begin{bmatrix}
 \end{bmatrix}
 = \boldsymbol{\varphi}^\top \boldsymbol{\theta}
 $$
+
 where:
 - $y$ is the **output** (a known scalar),
 - $\varphi_{1}, \varphi_{2}, \dots, \varphi_{n}$ are the **regressors** (known values, also called features or basis functions),
@@ -57,17 +61,20 @@ where $R$ and $L$ are **unknown** parameters, and $U$, $I$, $\dot{I}$ are measur
 
 **Step 1 — Find the output $y$.**  
 All three terms are $U$, $RI$, $L\dot{I}$. Only $U$ is free of unknown parameters, so we keep it on the left:
+
 $$
 y = U
 $$
 
 **Step 2 — Separate known and unknown parts.**  
 The right side has two terms, $RI$ and $L\dot{I}$. In each term, the *variable* part is known and the *coefficient* is unknown:
+
 $$
 RI + L\dot{I} = \underbrace{I}_{\varphi_1}\underbrace{R}_{\theta_1} + \underbrace{\dot{I}}_{\varphi_2}\underbrace{L}_{\theta_2} = \varphi_1 \theta_1 + \varphi_2 \theta_2
 $$
 
 **Step 3 — Write the LRM.**
+
 $$
 \begin{align}
 y &= \varphi_{1} \theta_{1} + \varphi_{2}\theta_{2} \\
@@ -83,24 +90,29 @@ with $\varphi_1 = I$, $\varphi_2 = \dot{I}$, $\theta_1 = R$, $\theta_2 = L$.
 ## Example 2: Mass–Spring–Damper System
 
 > Consider a mechanical system with mass $m$, damping coefficient $b$, and spring stiffness $k$, driven by an external force $F$. Newton's second law gives:
+
 $$
 F = m\ddot{x} + b\dot{x} + kx
 $$
+
 where $m$, $b$, $k$ are **unknown** parameters and $x$ is the measured position.
 
 **Step 1 — Find the output $y$.**  
 The only term without unknown parameters is $F$:
+
 $$
 y = F
 $$
 
 **Step 2 — Separate known and unknown parts.**  
 There are three terms on the right, so we get three regressors:
+
 $$
 m\ddot{x} + b\dot{x} + kx = \underbrace{\ddot{x}}_{\varphi_1}\underbrace{m}_{\theta_1} + \underbrace{\dot{x}}_{\varphi_2}\underbrace{b}_{\theta_2} + \underbrace{x}_{\varphi_3}\underbrace{k}_{\theta_3}
 $$
 
 **Step 3 — Write the LRM.**
+
 $$
 y = \begin{bmatrix} \ddot{x} & \dot{x} & x \end{bmatrix}
     \begin{bmatrix} m \\ b \\ k \end{bmatrix}
@@ -112,26 +124,31 @@ $$
 ## Example 3: Static Nonlinear Function (Linear in Parameters)
 
 > Suppose a measured quantity $z$ depends on a variable $u$ through
+>
 > $$
 > z = a + b\,u + c\,u^2
 > $$
+>
 > where $a$, $b$, $c$ are **unknown** parameters.
 
 Even though $z$ is a *nonlinear* function of $u$, the model is still **linear in the parameters** $a, b, c$.
 
 **Step 1 — Find the output $y$.**  
 The whole expression is on the right, so:
+
 $$
 y = z
 $$
 
 **Step 2 — Separate known and unknown parts.**  
 The regressors are the *known functions of $u$*:
+
 $$
 a + b\,u + c\,u^2 = \underbrace{1}_{\varphi_1}\underbrace{a}_{\theta_1} + \underbrace{u}_{\varphi_2}\underbrace{b}_{\theta_2} + \underbrace{u^2}_{\varphi_3}\underbrace{c}_{\theta_3}
 $$
 
 **Step 3 — Write the LRM.**
+
 $$
 y = \begin{bmatrix} 1 & u & u^2 \end{bmatrix}
     \begin{bmatrix} a \\ b \\ c \end{bmatrix}
@@ -157,14 +174,19 @@ $$
 where $m$ and $b$ are **unknown** parameters, and $g$, $v$, $\dot{v}$ are measured.
 
 1. Deveide by the $m$
+
 $$
 g - \frac{b}{m} v = \dot{v}
 $$
+
 2. Find output $y$
+
    $$
    y = g - \dot{v}
    $$
+
 3. Equation
+
    $$
    g - \dot{v} = \frac{b}{m} v
    $$
